@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Youtube Player</string>
+    <string name="playVideoBtnTxt">PLAY VIDEO</string>
+    <string name="playPlaylistBtnTxt">PLAY PLAYLIST</string>
+    <string name="btnPlaySingleTxt">PLAY A SINGLE VIDEO</string>
+    <string name="btnStandalone">STANDALONE SUB MENU</string>
 </resources>
