@@ -12,7 +12,7 @@ import com.google.android.youtube.player.YouTubePlayerView;
 
 public class YoutubeActivity extends YouTubeBaseActivity
     implements YouTubePlayer.OnInitializedListener{
-    static final String  GOOGLE_API_KEY = "";//TODO: add api key";
+    static final String  GOOGLE_API_KEY = "temp api key";//TODO: add api key";
     static final String YOUTUBE_VIDEO_ID = "vrN4TOY8rSw";
     static final String YOUTUBE_PLAYLIST = "PL7xvYrkzD7N_fpt9C1CWq6m_91YQmBd55";
 
@@ -30,6 +30,8 @@ public class YoutubeActivity extends YouTubeBaseActivity
 
     @Override
     public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean wasRestored) {
+       youTubePlayer.setPlaybackEventListener(playbackEventListener);
+       youTubePlayer.setPlayerStateChangeListener(playerStateChangeListener);
         if(!wasRestored){
             youTubePlayer.cueVideo(YOUTUBE_VIDEO_ID);
         }
